@@ -9,7 +9,7 @@ public class StudentSorter implements Comparator {
         Student student1=(Student)o1;
         Student student2=(Student)o2;
         
-        //comparing on the basis of name
+        //comparing on the basis of age
         if(student1.getAge()==student2.getAge())
         {
             if(student1.getId()>student2.getId())
