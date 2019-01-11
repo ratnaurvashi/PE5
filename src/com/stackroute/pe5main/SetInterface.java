@@ -1,21 +1,23 @@
-/*6. Write a program to implement set interface which sorts the given randomly ordered names in
-ascending order. Convert the sorted set in to an array list
-Input : Harry Olive Alice Bluto Eugene
-Output :
-Sorted Set : Alice Bluto Eugene Harry Olive
-Array list from Set : Alice Bluto Eugene Harry Olive
-*/
-
+package com.stackroute.pe5main;
 import java.util.*;
 
 public class SetInterface {
+    //method for converting sortedset to list
     public List<String> convertSortedSet(Set<String> sortedset){
+        //check for null
+        if(sortedset==null)
+            return null;
       List<String> list = new ArrayList<>();
+      //adds all elements of set to list
         list.addAll(sortedset);
         return list;
     }
 
+    //method for sorting names
     public Set<String> sortNames(String[] names){
+        //check for null
+        if(names==null)
+            return null;
         Set<String> sortedset = new HashSet<>();
         for(int i=0;i<names.length;i++)
             sortedset.add(names[i]);

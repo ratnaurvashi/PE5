@@ -1,3 +1,6 @@
+package com.stackroute.pe5test;
+
+import com.stackroute.pe5main.NumberOfCounts;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -42,4 +45,9 @@ public class NumberOfCountsTest {
         assertNotEquals(expectedmap,resultmap);
     }
 
+    @Test
+    public void numberOfCountsForNull(){
+        Map<String,Integer> resultmap = test.numberOfCounts(null);
+        assertNull(null,resultmap);
+    }
 }

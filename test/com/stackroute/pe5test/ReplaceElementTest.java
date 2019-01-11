@@ -1,3 +1,6 @@
+package com.stackroute.pe5test;
+
+import com.stackroute.pe5main.ReplaceElement;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -56,6 +59,13 @@ public class ReplaceElementTest {
     }
 
     @Test
+    public void replaceElementForNull(){
+        ArrayList<String> input = null;
+        ArrayList<String> actualresult = test.removeAllElements(input);
+        assertNull(null,input);
+    }
+
+    @Test
     public void removeAllElementsSuccess(){
         ArrayList<String> expectedresult = new ArrayList<>();
         expectedresult.clear();
@@ -88,5 +98,11 @@ public class ReplaceElementTest {
         assertNotEquals(expectedresult,actualresult);
     }
 
+    @Test
+    public void removeAllElementsForNull(){
+        ArrayList<String> input = null;
+        ArrayList<String> actualresult = test.removeAllElements(input);
+        assertNull(null,actualresult);
+    }
 
 }

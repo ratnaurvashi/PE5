@@ -1,3 +1,7 @@
+package com.stackroute.pe5test;
+
+import com.stackroute.pe5main.MainTest;
+import com.stackroute.pe5main.Student;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -71,5 +75,12 @@ public class MainTestTest {
 
         List<Student> actualresult = test.SortStudents(input);
         assertNotEquals(expectedresult,actualresult);
+    }
+
+    @Test
+    public void sortStudentsForNull(){
+        List<Student> input = null;
+        List<Student> actualresult = test.SortStudents(input);
+        assertNull(null,actualresult);
     }
 }

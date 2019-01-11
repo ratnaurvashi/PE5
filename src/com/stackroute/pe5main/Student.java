@@ -1,16 +1,18 @@
-import java.util.Comparator;
+package com.stackroute.pe5main;
 
 public class Student {
-
-
     private int id;
     private String name;
     private int age;
 
-    public Student() {
-
+    //constructor for student class
+    public Student(int id, String name, int age){
+        this.id=id;
+        this.name=name;
+        this.age=age;
     }
 
+    //getters and setters for student class
     public int getId() {
         return this.id;
     }
@@ -34,12 +36,4 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Student(int id, String name, int age){
-        this.id=id;
-        this.name=name;
-        this.age=age;
-    }
-
-
 }

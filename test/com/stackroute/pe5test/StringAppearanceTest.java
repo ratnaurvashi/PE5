@@ -1,7 +1,9 @@
+package com.stackroute.pe5test;
+
+import com.stackroute.pe5main.StringAppearance;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,5 +44,11 @@ public class StringAppearanceTest {
 
         Map<String,Boolean> actualresult = test.stringAppearance(new String[] {"a","b","c","d","a","c","c"});
         assertNotEquals(expectedresult,actualresult);
+    }
+
+    @Test
+    public void stringAppearanceForNull(){
+        Map<String,Boolean> actualresult = test.stringAppearance(null);
+        assertNull(null,actualresult);
     }
 }

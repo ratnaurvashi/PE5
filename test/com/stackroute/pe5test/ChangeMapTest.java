@@ -1,3 +1,6 @@
+package com.stackroute.pe5test;
+
+import com.stackroute.pe5main.ChangeMap;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -84,5 +87,10 @@ public class ChangeMapTest {
 
         Map<String,String> actualresult1 = test.changeMap(input1);
         assertEquals(expectedmap1,actualresult1);
+    }
+
+    @Test
+    public void changeMapForNull(){
+        assertNull(null, test.changeMap(null));
     }
 }

@@ -1,3 +1,5 @@
+package com.stackroute.pe5main;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -20,35 +22,26 @@ public class MainTest {
                 students.add(ob4);
                 students.add(ob5);
 
-
-                System.out.println("Unsorted array is");
-
                 Iterator it = students.iterator();
                 while (it.hasNext()) {
                         Student element = (Student) it.next();
-                        System.out.print(element.getId() + " " + element.getName() + " " + element.getAge() + " ");
-                        System.out.println();
+                        //System.out.print(element.getId() + " " + element.getName() + " " + element.getAge() + " ");
+                        //System.out.println();
 
                 }
-
-                System.out.println();
-                System.out.println("Sorted according to their age is");
-
                 MainTest obj = new MainTest();
-
-                System.out.println(obj.SortStudents(students));
-
+                obj.SortStudents(students);
         }
-
 
         public List<Student> SortStudents(List<Student> s)
         {
-                String str="";
+                if(s==null)
+                        return null;
                 Collections.sort(s,new StudentSorter());
                 Iterator it1 = s.iterator();
                 while (it1.hasNext()) {
                         Student element = (Student) it1.next();
-                        System.out.println(element.getId() + " " + element.getName() + " " + element.getAge()+" ");
+                        //System.out.println(element.getId() + " " + element.getName() + " " + element.getAge()+" ");
                 }
                 return s;
         }

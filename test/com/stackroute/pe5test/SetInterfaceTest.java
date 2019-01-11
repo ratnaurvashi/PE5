@@ -1,3 +1,6 @@
+package com.stackroute.pe5test;
+
+import com.stackroute.pe5main.SetInterface;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,6 +49,12 @@ public class SetInterfaceTest {
     }
 
     @Test
+    public void sortNamesForNull(){
+        Set<String> actualset = test.sortNames(null);
+        assertNull(null,actualset);
+    }
+
+    @Test
     public void convertSortedSetSuccess(){
         List<String> expectedlist = new ArrayList<>();
         expectedlist.add("Alice");
@@ -83,5 +92,11 @@ public class SetInterfaceTest {
 
         List<String> actuallist = test.convertSortedSet(input);
         assertNotEquals(expectedlist,actuallist);
+    }
+
+    @Test
+    public void convertSortedSetForNull(){
+        List<String> actualset = test.convertSortedSet(null);
+        assertNull(null,actualset);
     }
 }
